@@ -5,18 +5,22 @@ pdfauthor={Anton Petrunin}}
 
 
 \begin{document}
+%\pagestyle{empty}
+
 \title{Moon in a puddle and\\ the four-vertex theorem}
 \author{Anton Petrunin and Sergio Zamora Barrera}
 \date{}
 \maketitle
 
-The theorem about the Moon in a puddle by Vladimir Ionin and German Pestov \cite{pestov-ionin} is not very well known, but it deserves to be included in standard introductory texts on differential geometry of curves.
-It gives the simplest meaningful example of a local-to-global theorem which what differential geometry is about.
+The theorem about the Moon in a puddle is not very well known, but it deserves to be included in standard introductory texts on differential geometry of curves.
+It gives the simplest meaningful example of a local-to-global theorem which is what differential geometry is about.
 
 This note is divided in two parts: we present a proof of the Moon in a puddle theorem and we use its key lemma to give a new proof of the four-vertex theorem. 
 
 
 \section*{Moon in a puddle}
+
+The following question was asked by Abram Fet and solved by Vladimir Ionin and German Pestov \cite{pestov-ionin}.
 
 \begin{thm}{Theorem}\label{thm:moon-orginal}
 Assume $\gamma$ is a simple closed smooth regular plane curve with curvature bounded by~1.
@@ -38,10 +42,14 @@ However, as one may see from the spinner-like example on the diagram it does not
 
 }
 
-We present the proof from \cite{petrunin-zamora} which is slight improvement of the original proof.
-Another approach is sketched in~\cite{petrunin-2020,panov-petrunin}, and \cite[Problem 1.7.19]{toponogov}.
+We present the proof from our textbook \cite{petrunin-zamora} which is a slight improvement of the original proof.
+Other approaches are discussed in~\cite{petrunin-2020,panov-petrunin,pankrashkin}, and \cite[Problem 1.7.19]{toponogov}.
+Let us mention that analogous statement for surfaces does not hold --- there is body $V$ in the Euclidean space bounded by a smooth surface with principal curvatures at most 1 such that $V$ does not contain a unit ball; moreover one can assume that $V$ is homeomorphic to the ball.
+Such an example can be obtained by fattening a nontrivial contractible 2-complex in $\RR^3$ 
+(Bing's house constructed in \cite{bing} will do the job).
+This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet}; see also our textbook \cite{petrunin-zamora}.
 
-Let us use term \emph{circline} as a shortcut for \emph{circle or line}.
+Let us use the term \emph{circline} as a shortcut for a \emph{circle or line}.
 Note that an osculating circline of a smooth regular curve is defined at each of its points --- no need to assume that the curvature does not vanish.
 
 We say that a circline $\sigma$ \emph{supports} a curve $\gamma$ at a point $p$ if the point $p$ lies on both $\sigma$ and $\gamma$ and the curve $\gamma$ lies in one of the closed regions that $\sigma$ cuts from the plane.
@@ -135,7 +143,7 @@ Recall that a \emph{vertex} of a smooth regular curve is defined as a critical p
 in particular, any local minimum (or maximum) of the signed curvature is a vertex.
 For example, every point of a circle is its vertex.
 
-The classical four-vertex theorem says that \emph{any closed smooth regular plane curve without self-interections have at least four vertexes}.
+The classical four-vertex theorem says that \emph{any closed smooth regular plane curve without self-intersections have at least four vertices}.
 It has a number of different proofs and generalizations.
 One of our favorite proofs was given by Robert Osserman \cite{osserman}; this paper also contains a short account on the history of the theorem.
 
@@ -144,13 +152,11 @@ The latter is easy to check directly, but it also follows from Tait--Kneser spir
 Therefore the following theorem is indeed a generalization of the four-vertex theorem:
 
 \begin{thm}{Theorem}\label{thm:4-vert}
-Any smooth regular simple plane curve has is supported by its osculating circline at 4 distinct points; two from inside and two from outside.
+Any smooth regular simple plane curve is supported by its osculating circline at 4 distinct points; two from inside and two from outside.
 \end{thm}
 
-{
-
 \begin{wrapfigure}{r}{33 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-63}
 \vskip0mm
@@ -164,11 +170,9 @@ Therefore the key lemma implies the existence of another point $q\in\gamma$ with
 It shows the existence of two osculating circles that support $\gamma$ from inside;
 it remains to show existence of two osculating circles that support $\gamma$ from outside.
 
-}
-
 Let us apply to $\gamma$ an inversion with respect to a circle whose center lies inside~$\gamma$, then the obtained curve $\gamma_1$ also has  two osculating circles that support $\gamma_1$ from inside.
 Note that these osculating circlines are inverses of the osculating circlines of $\gamma$.
-Indeed, osculating circleline can be defined as a circline that has second order of contact with $\gamma$ at the point.
+Indeed, the osculating circleline can be defined as a circline that has a second order of contact with $\gamma$ at the point.
 It remains to note that inversion does not change the order of contact between curves.
 
 Note that the region lying inside of $\gamma$ is mapped to the region outside of $\gamma_1$ and the other way around.
