@@ -183,7 +183,7 @@ endfig;
 
 beginfig(65);
 save u;
-u:=.8cm;
+u:=1cm;
 
 save p; path p[];
 p0= circle(origin,1*u);
@@ -208,6 +208,32 @@ label.lrt(btex $p_1$ etex, z.p1);
 label.urt(btex $p_2$ etex, z.p2);
 label.lft(btex $\dots$ etex rotated (angle (direction  1.5 of p0)), point 1.5 of p0);
 label.lrt(btex $p_{2{\cdot} n}$ etex, z.p8);
+endfig;
+
+beginfig(305);
+save u,p,t;
+path p[];
+u:=1cm;
+
+z[0]=(0,1)*u;
+z.k=(1-.01,.08);
+
+for i=1 step 1 until 1000:
+z[i]=z[i-1] zscaled z.k;
+endfor
+
+p0=
+for i=0 step 1 until 1000:
+z[i]..
+endfor
+origin;
+
+p1=subpath(20,220) of p0 ... reverse( subpath(0,200) of p0) rotated 90...cycle;
+
+draw p1;
+
+draw circle((-1,0)*u,u) penhair;
+
 endfig;
 
 end
