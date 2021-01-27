@@ -5,29 +5,30 @@
 \backgroundsetup{
 scale=1,
 %color=black,
-opacity=.6,
+opacity=1,
 angle=0,
 contents={%
   \includegraphics[width=\paperwidth%,height=\paperheight
-  ]{jpg/moon-fish-bw}
+  ]{jpg/Moon}
   }%
 }
 
 \hypersetup{pdftitle={Moon in a puddle and four-vertex theorem},
-pdfauthor={Anton Petrunin and Sergio Zamora Barrera}}
+pdfauthor={Anton Petrunin and Sergio Zamora Barrera with artwork by Ana Chávez Cáliz}}
 
 
 \begin{document}
 %\pagestyle{empty}
 
-%\BgThispage
+\BgThispage
 
 \title{Moon in a puddle and the four-vertex theorem}
-\author{Anton Petrunin and Sergio Zamora Barrera}
+\author{%Anton Petrunin and Sergio Zamora Barrera\\ with artwork by Ana Chávez Cáliz
+}
 \date{}
 \maketitle
 
-%\thispagestyle{empty}\newpage
+\thispagestyle{empty}\newpage
 
 The theorem about the Moon in a puddle is not very well known, but it deserves to be included in standard introductory texts on differential geometry of curves.
 It gives the simplest meaningful example of a local-to-global theorem which is mainly what differential geometry is about.
@@ -59,15 +60,18 @@ However, as one may see from the spinner-like example on the diagram, it does no
 
 }
 
-We present the proof from our textbook \cite{petrunin-zamora} which is a slight improvement of the original proof.
+We present %the proof from our textbook \cite{petrunin-zamora} which is 
+a slight improvement of the original proof.
 There are other solutions: 
 One is based on curve-shortening flow; it is given by Konstantin Pankrashkin  \cite{pankrashkin}.
-Another use cutlocus; it is sketched in \cite{petrunin-2020,panov-petrunin}, and \cite[Problem 1.7.19]{toponogov}.
+Another use cutlocus; it is sketched in %\cite{petrunin-2020,panov-petrunin}, and 
+\cite[Problem 1.7.19]{toponogov}.
 
 Let us mention that an analogous statement for surfaces does not hold --- there is a solid body $V$ in the Euclidean space bounded by a smooth surface whose principal curvatures are bounded by 1 such that $V$ does not contain a unit ball; moreover one can assume that $V$ is homeomorphic to the 3-ball.
 Such an example can be obtained by inflating a nontrivial contractible 2-complex in $\RR^3$ 
 (Bing's house constructed in \cite{bing} would do the job).
-This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet}; see also our textbook \cite{petrunin-zamora}.
+This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet}%; see also our textbook \cite{petrunin-zamora}
+.
 
 \medskip
 
@@ -111,14 +115,6 @@ assume that the osculating circle at each point $p\in \gamma$ does not lie in~$F
 Given a point $p\in\gamma$ let us consider the maximal circle $\sigma$ that lies completely in $F$ and is tangent to $\gamma$ at $p$.
 The circle $\sigma$ will be called the {}\emph{incircle} of $F$ at $p$.
 
-\begin{wrapfigure}{r}{32 mm}
-\vskip0mm
-\centering
-\includegraphics{mppics/pic-64}
-\caption*{Two ovals pretend to be circles.}
-\vskip0mm
-\end{wrapfigure}
-
 Note that the curvature $\skur_\sigma$ of the incircle $\sigma$ has to be strictly larger than the signed curvature of $\gamma$ at $p$, further denoted by $\skur(p)_\gamma$.
 It follows that $\sigma$ has to touch $\gamma$ at another point.
 Otherwise we can increase $\sigma$ slightly while keeping it inside $F$.
@@ -134,6 +130,13 @@ Otherwise, if $\sigma_2$ intersects $\hat\sigma_1$ at some point $s$, then $\sig
 Therefore $\sigma_1\z=\sigma_2$ since these two circles have three common points: $s$, $x$, and $y$. 
 On the other hand, by construction, $p_2\in \sigma_2$ and $p_2\notin \sigma_1$ --- a contradiction.
 
+\begin{wrapfigure}{r}{32 mm}
+\vskip-5mm
+\centering
+\includegraphics{mppics/pic-64}
+\caption*{Two ovals pretend to be circles.}
+\vskip0mm
+\end{wrapfigure}
 
 Recall that $\sigma_2$ has to touch $\gamma$ at another point.
 From above it follows that it cannot touch $\gamma \backslash \gamma_1$, and therefore we can choose an arc $\gamma_2\subset \gamma_1$ that runs from $p_2$ to a first point $q_2$ on $\sigma_2$.
