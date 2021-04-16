@@ -81,11 +81,13 @@ z.q3=directionpoint z.d4 of p3;
 
 dOt z.p1, z.p2, z.p3, z.q1, z.q2, z.q3, z.pp, z.base;
 
+
 label(btex $\sigma_1$ etex, z.o1);
 label(btex $\sigma_2$ etex, z.o2);
 whitelabel(btex $\hat\sigma_3$ etex, z.o3-(x.r3,0));
 whitelabel(btex $\check\sigma_3$ etex, z.o3+(x.r3,0));
 whitelabel(btex $\sigma_\infty$ etex, point 2 of p4);
+label.lft(btex $p_0$ etex, z.base);
 label.lrt(btex $p_1$ etex, z.p1);
 label.llft(btex $p_2$ etex, z.p2);
 label.bot(btex $p_3$ etex, z.p3);
