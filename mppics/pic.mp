@@ -149,7 +149,7 @@ endfig;
 
 beginfig(64);
 save u;
-u:=1cm;
+u:=1.4cm;
 
 z.p1=(0,0)*u;
 z.q1=(.2,2)*u;
