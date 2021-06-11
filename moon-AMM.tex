@@ -39,7 +39,7 @@ contents={%
 \newtheorem*{remark}{Remark}
 
 \begin{document}
-
+\final
 \title{Moon in a puddle and four-vertex theorem}
 \markright{Moon in a puddle}
 \author{Anton Petrunin and Sergio Zamora Barrera\\ with artwork by Ana Cristina Chávez Cáliz}
@@ -50,9 +50,7 @@ contents={%
 \begin{abstract}
 The theorem about the Moon in a puddle provides the simplest meaningful example of a local-to-global theorem which is mainly what differential geometry is about.
 Yet, the theorem is surprisingly not well-known.
-This paper aims to redress this omission by calling attention to the result and applying it to a well known theorem.
-
-This note is divided into two parts: first, we present a proof of the Moon in a puddle theorem, and, second, we use its key lemma to prove a generalization of the well-known four-vertex theorem.
+This paper aims to redress this omission by calling attention to the result and applying it to a well-known theorem.
 \end{abstract}
 
 \newpage
@@ -65,7 +63,7 @@ Assume $\gamma$ is a simple closed smooth regular plane curve with curvature bou
 Then the region surrounded by $\gamma$ contains a unit disc.
 \end{theorem}
 
-We present %the proof from our textbook \cite{petrunin-zamora} which is 
+We present the proof from our textbook \cite{petrunin-zamora} which is 
 a slight improvement of the original proof.
 Both proofs work under the weaker assumption that the signed curvature is at most one, assuming that the sign is chosen suitably.
 A more general statement for a barrier-type bound on the curvature was given by Anders Aamand, Mikkel Abrahamsen, and Mikkel Thorup~\cite{aamand-abrahamsen-thoru}.
@@ -79,11 +77,11 @@ Another one uses cut locus; it is sketched by Victor Toponogov
 Let us mention that an analogous statement for surfaces does not hold --- there is a solid body $V$ in the Euclidean space bounded by a smooth surface whose principal curvatures are bounded in absolute value by 1 such that $V$ does not contain a unit ball; moreover one can assume that $V$ is homeomorphic to the 3-ball.
 Such an example can be obtained by inflating a nontrivial contractible 2-complex in $\mathbb{R}^3$ 
 (Bing's house constructed in \cite{bing} would do the job).
-This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet}; see also our textbook \cite{petrunin-zamora}.
+This problem is discussed by Abram Fet and Vladimir Lagunov \cite{lagunov-2,lagunov-fet}; see also \cite{petrunin-zamora}.
 
 \medskip
 
-A path $\gamma\: [0,1]\z\to \mathbb{R}^2$ such that $\gamma (0) = \gamma (1)$ will be called a \emph{loop};
+A path $\gamma\colon [0,1]\z\to \mathbb{R}^2$ such that $\gamma (0) = \gamma (1)$ will be called a \emph{loop};
 the point $\gamma (0)$ is called the \emph{base} of the loop.
 A loop is \emph{smooth}, \emph{regular}, and \emph{simple} if it is smooth and regular in $[0,1]$, and injective in the open interval $(0,1)$.
 
@@ -97,19 +95,19 @@ Otherwise, we say that $\sigma$ \emph{supports} $\gamma$ \emph{from the outside}
 
 \begin{keylemma}\label{thm:moon}
 Assume $\gamma$ is a simple smooth regular plane loop.
-Then at one point of $\gamma$ (distinct from its base) its osculating circle $\sigma$ supports $\gamma$ from inside.
+Then at one point of $\gamma$ (distinct from its base), its osculating circle $\sigma$ supports $\gamma$ from inside.
 \end{keylemma}
 
 First, let us show that the theorem follows from the lemma.
 
-\medskip\noindent\textit{Proof of \ref{thm:moon-orginal} modulo \ref{thm:moon}.}
-Since $\gamma$ has absolute curvature of at most 1, each osculating circle has radius of at least 1.
+\medskip\noindent\textit{Proof of the theorem modulo the key lemma.}
+Since $\gamma$ has absolute curvature of at most~1, each osculating circle has radius of at least 1.
 
 According to the key lemma, one of the osculating circles $\sigma$ supports $\gamma$ from inside.
 In this case, $\sigma$ lies inside $\gamma$, whence the result.
 \qed
 
-\medskip\noindent\textit{Proof of \ref{thm:moon}.}
+\medskip\noindent\textit{Proof of the key lemma.}
 Denote by $F$ the closed region surrounded by $\gamma$.
 Arguing by contradiction,
 assume that the osculating circle at each point $p\ne p_0$ on $\gamma$ does not lie in~$F$.
@@ -176,12 +174,12 @@ For example, every point of a circle is a vertex.
 
 The classical four-vertex theorem says that \emph{any closed smooth regular plane curve without self-intersections has at least four vertices}.
 It has many different proofs and generalizations.
-A very transparent proofs was given by Robert Osserman \cite{osserman}; his paper contains a short account of the history of the theorem.
+A very transparent proof was given by Robert Osserman \cite{osserman}; his paper contains a short account of the history of the theorem.
 
 Note that if an osculating circline $\sigma$ at a point $p$ supports $\gamma$, then $p$ is a vertex.
 The latter can be checked by direct computation, but it also follows from the Tait--Kneser spiral theorem \cite{ghys-tabachnikov-timorin}.
-It states that the \emph{osculating circles of a curve with monotonic curvature are disjoint and nested};
-in particular none of these circles can support the curve.
+It states that the \emph{osculating circlines of a curve with monotonic curvature are disjoint and nested};
+in particular, none of these circlines can support the curve.
 Therefore the following theorem is indeed a generalization of the four-vertex theorem:
 
 {
@@ -260,13 +258,13 @@ Osculating curves: around the Tait--Kneser theorem.
 
 \bibitem{lagunov-2}\begin{otherlanguage}{russian}
 В. Н. Лагунов. О наибольшем шаре, вложенном в замкнутую поверхность,
-II. \textit{Сибирский математический журнал}\end{otherlanguage}
+II.  Сибирский математический журнал\end{otherlanguage}
 \ \textbf{2.6} (1961), 874--883.
 
 
 \bibitem{lagunov-fet}\begin{otherlanguage}{russian}
 В. Н. Лагунов и А. И. Фет. Экстремальные задачи для поверхностей за-
-данного топологического типа II. \textit{Сибирский математический журнал}\end{otherlanguage}
+данного топологического типа II. Сибирский математический журнал\end{otherlanguage}
 \ \textbf{6}
 (1965), 1026--1036.
 
@@ -284,9 +282,9 @@ The four-or-more vertex theorem.
 \bibitem{panov-petrunin} D. Panov and A. Petrunin. Ramification conjecture and Hirzebruch’s property
 of line arrangements. \textit{Compos. Math.} \textbf{152.12} (2016), 2443--2460.
 
-\bibitem{pestov-ionin}\begin{otherlanguage}{russian}
+\bibitem{pestov-ionin}\begin{otherlanguage}{russian}{\fontencoding{T2A}
 Г. Г. Пестов и Ионин В. К. О наибольшем круге, вложенном в замкнутую
-кривую. \textit{Доклады АН СССР}\end{otherlanguage}\  \textbf{127} (1959), 1170--1172.
+кривую. \textit{Доклады АН СССР}}\end{otherlanguage}\  \textbf{127} (1959), 1170--1172.
 
 \bibitem{petrunin-2020}
 A. Petrunin. \textit{PIGTIKAL (puzzles in geometry that I know and love).} 
