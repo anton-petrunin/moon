@@ -48,10 +48,11 @@ contents={%
 \BgThispage
 \thispagestyle{empty}
 \begin{abstract}
-The theorem about the Moon in a puddle is not very well known, but it deserves to be included in introductory texts on differential geometry.
-It provides the simplest meaningful example of a local-to-global theorem which is mainly what differential geometry is about.
+The theorem about the Moon in a puddle provides the simplest meaningful example of a local-to-global theorem which is mainly what differential geometry is about.
+Yet, the theorem is surprisingly not well-known.
+This paper aims to redress this omission by calling attention to the result and applying it to a well known theorem.
 
-This note is divided into two parts:  first --- we present a proof of the Moon in a puddle theorem, and second --- we use its key lemma to prove a generalization of the well-known four-vertex theorem.
+This note is divided into two parts: first, we present a proof of the Moon in a puddle theorem, and, second, we use its key lemma to prove a generalization of the well-known four-vertex theorem.
 \end{abstract}
 
 \newpage
@@ -68,7 +69,7 @@ We present %the proof from our textbook \cite{petrunin-zamora} which is
 a slight improvement of the original proof.
 Both proofs work under the weaker assumption that the signed curvature is at most one, assuming that the sign is chosen suitably.
 A more general statement for a barrier-type bound on the curvature was given by Anders Aamand, Mikkel Abrahamsen, and Mikkel Thorup~\cite{aamand-abrahamsen-thoru}.
-There are other proofs: 
+There are other proofs. 
 One is based on the curve-shortening flow; it is given by Konstantin Pankrashkin  \cite{pankrashkin}.
 Another one uses cut locus; it is sketched by Victor Toponogov 
 \cite[Problem 1.7.19]{toponogov}; see also \cite{petrunin-2020,panov-petrunin}.
@@ -86,7 +87,7 @@ A path $\gamma\: [0,1]\z\to \mathbb{R}^2$ such that $\gamma (0) = \gamma (1)$ wi
 the point $\gamma (0)$ is called the \emph{base} of the loop.
 A loop is \emph{smooth}, \emph{regular}, and \emph{simple} if it is smooth and regular in $[0,1]$, and injective in the open interval $(0,1)$.
 
-Let us use the term \emph{circline} as a shortcut for a \emph{circle or line}.
+Let us use the term \emph{circline} as a shorthand for a \emph{circle or line}.
 Note that the osculating circline of a smooth regular curve is defined at each of its points --- there is no need to assume that the curvature does not vanish.
 
 Suppose that $\gamma$ is a closed simple smooth plane loop.
@@ -102,7 +103,7 @@ Then at one point of $\gamma$ (distinct from its base) its osculating circle $\s
 First, let us show that the theorem follows from the lemma.
 
 \medskip\noindent\textit{Proof of \ref{thm:moon-orginal} modulo \ref{thm:moon}.}
-Since $\gamma$ has absolute curvature at most 1, each osculating circle has radius at least 1.
+Since $\gamma$ has absolute curvature of at most 1, each osculating circle has radius of at least 1.
 
 According to the key lemma, one of the osculating circles $\sigma$ supports $\gamma$ from inside.
 In this case, $\sigma$ lies inside $\gamma$, whence the result.
@@ -150,7 +151,7 @@ Since $p_2$ is the midpoint of $\gamma_1$, we have that
 \[\mathop{\rm length}\nolimits \gamma_2< \tfrac12\cdot\mathop{\rm length}\nolimits\gamma_1.\leqno({*})\]
 
 Repeating this construction recursively,
-we get an infinite sequence of arcs $\gamma_1\supset \gamma_2\supset\dots$;
+we obtain an infinite sequence of arcs $\gamma_1\supset \gamma_2\supset\dots$;
 by $({*})$, we also get that 
 \[\mathop{\rm length}\nolimits\gamma_n\to0\quad\text{as}\quad n\to\infty.\] 
 Therefore the intersection $\gamma_1\cap\gamma_2\cap\dots$
@@ -175,7 +176,7 @@ For example, every point of a circle is a vertex.
 
 The classical four-vertex theorem says that \emph{any closed smooth regular plane curve without self-intersections has at least four vertices}.
 It has many different proofs and generalizations.
-One of our favorite proofs was given by Robert Osserman \cite{osserman}; his paper contains a short account of the history of the theorem.
+A very transparent proofs was given by Robert Osserman \cite{osserman}; his paper contains a short account of the history of the theorem.
 
 Note that if an osculating circline $\sigma$ at a point $p$ supports $\gamma$, then $p$ is a vertex.
 The latter can be checked by direct computation, but it also follows from the Tait--Kneser spiral theorem \cite{ghys-tabachnikov-timorin}.
@@ -221,8 +222,8 @@ Therefore these two new circlines correspond to the osculating circlines support
 
 \begin{advancedexercise}\label{ex:curve-crosses-circle}
 Suppose $\gamma$ is a closed simple smooth regular plane curve and $\sigma$ is a circle.
-Assume $\gamma$ crosses $\sigma$ at the points $p_1,\dots,p_{2{\cdot} n}$ and these points appear in the same cycle order on $\gamma$ and on $\sigma$.
-Show that $\gamma$ has at least $2\cdot n$ vertices.
+Assume $\gamma$ crosses $\sigma$ at the points $p_1,\dots,p_{2 n}$ and these points appear in the same cycle order on $\gamma$ and on $\sigma$.
+Show that $\gamma$ has at least $2 n$ vertices.
 \end{advancedexercise}
 
 \begin{figure}[!ht]
