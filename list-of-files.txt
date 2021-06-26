@@ -1,0 +1,8 @@
+moon-AMM.tex
+maa-monthly.sty
+jpg/Curves-new.eps
+mppics/pic-32.mps
+mppics/pic-64.mps
+mppics/pic-63.mps
+mppics/pic-65.mps
+mppics/pic-305.mps
