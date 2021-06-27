@@ -5,7 +5,7 @@ input mparrows
 verbatimtex
 %&latex
 \documentclass[oneside]{book}
-\usepackage{../moon}
+\usepackage{moon}
 \begin{document}
 etex
 
@@ -13,8 +13,6 @@ filenametemplate "%j-%1c.mps";
 prologues:=3;
 setarrows(barbedsharp);
 linecap:=butt;
-%linejoin:=mitered;
-%filenametemplate "%j-%1c.svg";
 outputformat := "eps";
 
 
