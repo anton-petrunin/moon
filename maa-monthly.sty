@@ -235,7 +235,96 @@
       {\if@twocolumn\else\endquotation\fi}
 \fi
 
+%% RUNNING HEADS
 
+\def\ps@headings{%
+	\def\@evenfoot{\rlap{\thepage}\hfill\hbox to0pt{\hss{\copyright\ \normalsize\textsc{the mathematical association of america}}\hss}\hfill
+	\llap{[Monthly\ \thevolume}}%
+      \def\@oddfoot{\rlap{\themonth\ \theannual]}\hfill\hbox to0pt{\hss\footnotesize\MakeUppercase{\rightmark}\hss}\hfill
+	\llap{\thepage}}%
+      \let\@evenhead\@empty%
+      \let\@oddhead\@empty%
+      \let\@mkboth\markboth
+    \def\chaptermark##1{%
+      \markright {\MakeLowercase{##1}}}%
+    \def\sectionmark##1{}}%
+\pagestyle{headings}
+
+\def\ps@copyright{%
+	\def\@evenfoot{\hfill\hbox to0pt{\hss{\copyright\ \normalsize\textsc{the mathematical association of america}}\hss}\hfill}%
+      \let\@oddfoot\@evenfoot
+      \let\@evenhead\@empty%
+      \let\@oddhead\@empty%
+      \let\@mkboth\markboth
+    \def\chaptermark##1{}%
+    \def\sectionmark##1{}}%
+
+\renewcommand\part{\clearpage
+   \addvspace{0pt}%
+   \@afterindentfalse
+   \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >\m@ne
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    {\parindent \z@ \raggedright
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >\m@ne
+       \Large\bfseries \partname~\thepart
+       \par\nobreak
+     \fi
+     \huge \bfseries #2%
+     \markboth{}{}\par}%
+    \nobreak
+    \vskip 3ex
+    \@afterheading}
+\def\@spart#1{%
+    {\parindent \z@ \raggedright
+     \interlinepenalty \@M
+     \centering\normalfont
+     \LARGE\bfseries \MakeUppercase{#1}\par}%
+     \nobreak
+     \vskip 0pt
+     \@afterheading}
+
+\def\editor{\@ifnextchar [{\editoraddress}{\editornoaddress}}
+\def\editoraddress[#1]#2{\vskip5pt\bgroup\large\centering
+	Edited by \textbf{#2}\\
+	\normalsize\itshape#1\par\egroup
+	\vskip18pt
+	}
+\def\editornoaddress#1{\vskip5pt\bgroup\large\centering
+	Edited by \textbf{#1}\par\egroup
+	\vskip18pt
+	}
+\def\nomaketitle{\hrule height2pt\vskip20pt}
+
+\fboxsep11pt\fboxrule1pt
+\def\filler{\@ifnextchar [{\opargboxed}{\regboxed}}
+\def\opargboxed[#1]{\list{}{\topsep13pt plus5pt minus2.5pt
+	\leftmargin0pt\labelwidth0pt\labelsep0pt
+	}
+   \fboxsep11.5pt\fboxrule.5pt
+	\item[]\setbox\@tempboxa=\vbox\bgroup\hsize28pc\textwidth28pc
+		\linewidth28pc\boxhead{#1}}
+\def\regboxed{\list{}{\topsep13pt plus5pt minus2.5pt
+	\leftmargin0pt\labelwidth0pt\labelsep0pt
+	}
+   \fboxsep11.5pt\fboxrule.5pt
+	\item[]\setbox\@tempboxa=\vbox\bgroup\hsize28pc\textwidth28pc
+		\linewidth28pc}
+\def\endfiller{\egroup\fbox{\begin{minipage}{28pc}\unvbox\@tempboxa\end{minipage}}\endlist}
+
+\def\reviewer#1{\vspace*{6pt}\list{}{\topsep10pt plus4pt minus2pt
+	\leftmargin0pt\labelwidth0pt\labelsep0pt
+	}
+	\item[\large\textit{Reviewed by} \textbf{#1}]\strut
+	\endlist}
 
 
 %%

@@ -1,5 +1,5 @@
 moon-AMM.tex
-maa-monthly.sty
+maa-monthly-my.sty
 Curves-new.eps
 pic-32.mps
 pic-64.mps
