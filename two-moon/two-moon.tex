@@ -1,0 +1,141 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{paper-en}
+
+\def\thetitle{Two Moons of Berk Ceylan}
+\def\theauthors{}
+%\def\theauthors{Anton Petrunin}
+
+\hypersetup{colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
+%\overfullrule=100mm
+
+\begin{document}
+
+
+%\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}
+
+\title{\thetitle}
+\author{}
+\date{}
+\maketitle
+
+The following statement was conjectured by Berk Ceylan \cite{ceylan2023}.
+
+\parit{Let $F$ be a plane figure bounded by a curve whose curvature lies between $\mp1$
+Suppose the perimeter of $F$ is at least $4\cdot\pi$.
+Then $F$ contains two unit discs with no common interior points.}
+
+\medskip
+
+The bound $4\cdot\pi$ is optimal; the most obvious borderline case is the disc of radius 2, but several other boarder cases are shown on the diagram; their boundary curves made from arcs with curevature $\pm1$ and $\tfrac13$.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-10}
+\vskip0mm
+\end{figure}
+
+The proof will be given as a sequence of exercises.
+
+A disc in $F$ will be called an \emph{indisc} if it is maximal (with respect to inclusion) among discs of radius at most 1 in $F$;
+in particular, any disc of radius 1 in $F$ is an indisc.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-20}
+\caption*{Indiscs.}
+\vskip0mm
+\end{figure}
+
+
+\begin{enumerate}[(i)]
+
+\item
+Show that $F$ is the union of all its indiscs.
+
+\item 
+Assume $F$ is a counterexample, so its perimeter is at least $4\cdot\pi$, but it does not contain two nonoverlapping unit discs.
+By Berk's result, the diameter of $F$ is less than $4$.
+Apply approximation to show that we can assume that $F$ is bounded by a finite number, say $m$, of circle arcs with curvature $\pm1$ and has no corner points.
+
+\item\label{incircle-intersect}
+Follow the proof of Berk Ceylan \cite{ceylan2023} to show that any two indiscs in $F$ intersect.
+
+\item\label{r+2}
+Let $D\subset F$ be an indisc of radius $r$, and $D'$ be the concentric disc with radius $r+2$.
+Show that $D'\supset F$.
+
+\item
+Denote by $H$ the intersection of all closed discs of radius $3$ that contain~$F$.
+Use \ref{r+2} to show that $H$ is nonempty and its diameter is less than $4$.
+
+\item
+Apply Crofton's formula to prove that perimeter of $H$ is less than $4\cdot\pi$.
+
+\item\label{alpha-beta}
+The boundary of $H$ contains parts of boundary of $F$ and possibly several arcs, say $\alpha_1,\dots, \alpha_n$ of radius $3$.
+Each arc $\alpha_i$ corresponds to an arc, say $\beta_i$ of $\partial F$.
+Since the perimeter of $F$ is at least $4\cdot\pi$, we can choose index $i$ such that
+\[\length\beta_i>\length\alpha_i;\]
+set $\alpha=\alpha_i$ and $\beta=\beta_i$,
+
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-30}
+\vskip0mm
+\end{figure}
+
+\item Let $\alpha'$ and $\beta'$ be
+outer equidistant curves of $\alpha$ and $\beta$ at distance $1$.
+Use \ref{incircle-intersect} to show that $\beta'$ does not have self-intersections.
+
+\item\label{length-prime} Show that $\length\beta'-\length\beta=\length\alpha'-\length\alpha$.
+Conclude that
+\[\length\beta'>\length\alpha'.\]
+
+\item\label{2-discs} Note that $\alpha'$ has curvature radius $4$ and $\beta'$ made from several arcs of curvature radius $2$.
+Consider a circle $\sigma$ of radius $2$ that extends an arc of $\beta'$.
+Show that (1) the center of arc $\alpha'$ lies inside or on $\sigma$ and (2) points of $\beta'$ lie outside or on $\sigma$.
+
+\item Use the last statement to show that radial projection $\rho\:\beta'\to \alpha'$ with respect to the center of $\alpha'$ does not increase length. Arrive at a contradiction with~\ref{length-prime}.
+\qeds
+
+\end{enumerate}
+
+{\sloppy
+\def\emph{\textit}
+\printbibliography[heading=bibintoc]
+\fussy
+}
+\end{document}
+
+\item Suppose $\beta$ contains at least 4 arcs.
+Observe that $\beta_i$ is a curve in a family of the same type shown on the diagram;
+these curves share the endpoints and the directions at the endpoints.
+Show that the length of $\beta_i$ can be increased by moving it in the family.
+
+\item Varying $\beta_i$ in this family we can get a figure $F'$ with larger perimeter that still lies in $H$ and meets one of the following conditions: $\partial F'$ kisses itself at some point or it kisses $\partial H$ at an additional point or the corresponding arc $\beta_i'$ in $F'$ has exactly 3 arcs.
+Note that $F'$ is still a counterexample; indeed, it lies in the figure $H$ of diameter less than $4$.
+
+\item
+If $\beta_i'$ has exactly 3 arcs, then it looks like the the curve on the last diagram.
+Observe that in this case $\beta_i$ and $\alpha_i$ have the same length and arrive at a contradiction.
+
+\item
+Suppose $\partial F'$ kisses itself, so it looks like one of two figures on the diagram.
+In the first case, by the Moon in the puddle theorem, each of the parts of $F'$ subdivided by the tangency point contains a unit disc --- a contradiction.
+In the second case, observe that two incircles of $F'$ at the tangency point do not intersect.
+Therefore applying
